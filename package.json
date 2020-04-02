@@ -1,5 +1,39 @@
 {
-    "name" : "one-time-execution-method",
-    "main" : "src/one-time-execution-method.mjs",
-    "module" : "src/one-time-execution-method.mjs"
+  "name": "one-time-execution-method",
+  "version": "0.0.0-semantic-release",
+  "sideEffects": false,
+  "type": "module",
+  "main": "src/one-time-execution-method.mjs",
+  "module": "src/one-time-execution-method.mjs",
+  "description": "define a method that will be executed only once",
+  "license": "BSD-2-Clause",
+  "scripts": {
+    "cover": "#overwrite c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
+    "test": "#overwrite ava --timeout 2m",
+    "docs": "documentation readme src/one-time-execution-method.mjs --section=API",
+    "lint": "documentation lint src/one-time-execution-method.mjs"
+  },
+  "devDependencies": {
+    "c8": "^7.1.0",
+    "ava": "^3.5.2",
+    "documentation": "^12.2.0",
+    "semantic-release": "^17.0.4"
+  },
+  "engines": {
+    "node": ">=12.16.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arlac77/one-time-execution-method.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arlac77/one-time-execution-method/issues"
+  },
+  "homepage": "https://github.com/arlac77/one-time-execution-method#readme",
+  "template": {
+    "inheritFrom": [
+      "arlac77/template-esm-only",
+      "arlac77/template-github"
+    ]
+  }
 }
