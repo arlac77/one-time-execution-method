@@ -6,13 +6,6 @@
   "main": "src/one-time-execution-method.mjs",
   "module": "src/one-time-execution-method.mjs",
   "description": "define a method that will be executed only once",
-  "license": "BSD-2-Clause",
-  "scripts": {
-    "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
-    "test": "ava --timeout 2m",
-    "docs": "documentation readme src/one-time-execution-method.mjs --section=API",
-    "lint": "documentation lint src/one-time-execution-method.mjs"
-  },
   "keywords": [
     "once",
     "single",
@@ -20,9 +13,16 @@
     "one-time",
     "async"
   ],
+  "license": "BSD-2-Clause",
+  "scripts": {
+    "test": "ava --timeout 2m",
+    "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
+    "docs": "documentation readme src/one-time-execution-method.mjs --section=API",
+    "lint": "documentation lint src/one-time-execution-method.mjs"
+  },
   "devDependencies": {
-    "c8": "^7.1.0",
     "ava": "^3.5.2",
+    "c8": "^7.1.0",
     "documentation": "^12.2.0",
     "semantic-release": "^17.0.4"
   },
