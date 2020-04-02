@@ -9,10 +9,10 @@ jobs:
         - 13.12.0
     - stage: doc
       node_js: lts/*
-      skip_cleanup: 'true'
       script:
         - npm run lint
         - npm run docs
+      cleanup: 'false'
     - stage: release
       node_js: lts/*
       script: skip
