@@ -8,11 +8,18 @@
   "description": "define a method that will be executed only once",
   "license": "BSD-2-Clause",
   "scripts": {
-    "cover": "#overwrite c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
-    "test": "#overwrite ava --timeout 2m",
+    "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
+    "test": "ava --timeout 2m",
     "docs": "documentation readme src/one-time-execution-method.mjs --section=API",
     "lint": "documentation lint src/one-time-execution-method.mjs"
   },
+  "keywords": [
+    "once",
+    "single",
+    "one",
+    "one-time",
+    "async"
+  ],
   "devDependencies": {
     "c8": "^7.1.0",
     "ava": "^3.5.2",
