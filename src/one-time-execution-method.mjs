@@ -10,7 +10,7 @@
  * will be preserved and always delivered in the future.
  * ```js
  * class MyClass { }
- * defineOneTimeExecutionMethod(MyClass.prototype, "initialize", async function() {
+ * defineOneTimeExecutionMethod(MyClass.prototype, async function initialize() {
  *  // code here will be executed only once
  * });
  * 
@@ -18,10 +18,11 @@
  * object.initialize(); // body will be executed only once
  * ```
  * @param {Object} object prototype to bind method against 
- * @param {string} name of the method  
- * @param {AsyncFunction} func to be executed (once) must deliver a Promise 
+ * @param {AsyncFunction} func to be executed (once) must deliver a Promise
+ * @param {string} name of the method
  */
-export function defineOneTimeExecutionMethod(object, name, func) {
+export function defineOneTimeExecutionMethod(object, func, name=func.name) {
+
   /**
    * Object symbol slot holding the state of the method
    * * undefined -> call func and store Promise

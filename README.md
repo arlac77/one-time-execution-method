@@ -31,7 +31,7 @@ class MyClass {
 }
 
 // add initialize() method to MyClass
-defineOneTimeExecutionMethod(MyClass.prototype, "initialize", function() {
+defineOneTimeExecutionMethod(MyClass.prototype, function initialize() {
   this.executions++;
   return new Promise(resolve => setTimeout(resolve, 1000));
 });
@@ -75,7 +75,7 @@ will be preserved and always delivered in the future.
 
 ```js
 class MyClass { }
-defineOneTimeExecutionMethod(MyClass.prototype, "initialize", async function() {
+defineOneTimeExecutionMethod(MyClass.prototype, async function initialize() {
  // code here will be executed only once
 });
 
@@ -86,8 +86,8 @@ object.initialize(); // body will be executed only once
 ### Parameters
 
 -   `object` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** prototype to bind method against
--   `name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** of the method
 -   `func` **[AsyncFunction](#asyncfunction)** to be executed (once) must deliver a Promise
+-   `name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** of the method (optional, default `func.name`)
 
 ## transitionState
 

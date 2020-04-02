@@ -9,7 +9,7 @@ class MyClass {
   }
 }
 
-defineOneTimeExecutionMethod(MyClass.prototype, "initialize", function () {
+defineOneTimeExecutionMethod(MyClass.prototype, function initialize () {
   this.executions++;
   return new Promise(resolve => setTimeout(resolve, 200));
 });
@@ -34,7 +34,7 @@ test("defineOneTimeExecutionMethod parallel", async t => {
 
 
 
-defineOneTimeExecutionMethod(MyClass.prototype, "reentrantInitialize", async function() {
+defineOneTimeExecutionMethod(MyClass.prototype, async function reentrantInitialize() {
   this.executions++;
 
   await this.reentrantInitialize();
