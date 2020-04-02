@@ -9,7 +9,7 @@
  * For async functions the resulting Promise of the 1st. invocation
  * will be preserved and always delivered in the future.
  * ```js
- * class MyClass { ... }
+ * class MyClass { }
  * defineOneTimeExecutionMethod(MyClass.prototype, "initialize", async function() {
  *  // code here will be executed only once
  * });

@@ -9,7 +9,7 @@ class MyClass {
   }
 }
 
-defineOneTimeExecutionMethod(MyClass.prototype, "initialize", function() {
+defineOneTimeExecutionMethod(MyClass.prototype, "initialize", function () {
   this.executions++;
   return new Promise(resolve => setTimeout(resolve, 200));
 });
@@ -28,6 +28,25 @@ test("defineOneTimeExecutionMethod parallel", async t => {
   Promise.all([object.initialize(), object.initialize(), object.initialize()]);
 
   await object.initialize();
+
+  t.is(object.executions, 1);
+});
+
+
+
+defineOneTimeExecutionMethod(MyClass.prototype, "reentrantInitialize", async function() {
+  this.executions++;
+
+  await this.reentrantInitialize();
+  return new Promise(resolve => setTimeout(resolve, 200));
+});
+
+test.skip("defineOneTimeExecutionMethod reentrant", async t => {
+  const object = new MyClass();
+
+  t.is(object.executions, 0);
+
+  await object.reentrantInitialize();
 
   t.is(object.executions, 1);
 });
