@@ -1,5 +1,11 @@
 
 /**
+ * @typedef {Function} AsyncFunction
+ * @async
+ * @return {Promise} 
+ */
+
+/**
  * For async functions the resulting Promise of the 1st. invocation
  * will be preserved and always delivered in the future.
  * ```js
@@ -13,12 +19,13 @@
  * ```
  * @param {Object} object prototype to bind method against 
  * @param {string} name of the method  
- * @param {Function} func to be executed (once) must deliver a Promise 
+ * @param {AsyncFunction} func to be executed (once) must deliver a Promise 
  */
 export function defineOneTimeExecutionMethod(object, name, func) {
   /**
-   * undefined -> call func and store Promise
-   * Promise   -> func currently running or fullfilled -> deliver this Promise
+   * Object symbol slot holding the state of the method
+   * * undefined -> call func and store Promise
+   * * Promise   -> func currently running or fullfilled -> deliver this Promise
    */
   const transitionState = Symbol(`OneTimeExecutionState<${name}>`);
 

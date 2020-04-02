@@ -57,9 +57,16 @@ doit();
 
 ### Table of Contents
 
+-   [AsyncFunction](#asyncfunction)
 -   [defineOneTimeExecutionMethod](#defineonetimeexecutionmethod)
     -   [Parameters](#parameters)
 -   [transitionState](#transitionstate)
+
+## AsyncFunction
+
+Type: [Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
 ## defineOneTimeExecutionMethod
 
@@ -80,12 +87,14 @@ object.initialize(); // body will be executed only once
 
 -   `object` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** prototype to bind method against
 -   `name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** of the method
--   `func` **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** to be executed (once) must deliver a Promise
+-   `func` **[AsyncFunction](#asyncfunction)** to be executed (once) must deliver a Promise
 
 ## transitionState
 
-undefined -> call func and store Promise
-Promise   -> func currently running or fullfilled -> deliver this Promise
+Object symbol slot holding the state of the method
+
+-   undefined -> call func and store Promise
+-   Promise   -> func currently running or fullfilled -> deliver this Promise
 
 # install
 
