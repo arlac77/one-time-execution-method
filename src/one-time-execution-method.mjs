@@ -30,8 +30,8 @@ export function defineOneTimeExecutionMethod(object, name, func) {
   const transitionState = Symbol(`OneTimeExecutionState<${name}>`);
 
   Object.defineProperty(object, name, {
-    value: async function(...args) {
-      if (!this[transitionState]) {
+    value: function(...args) {
+      if (this[transitionState] === undefined) {
         this[transitionState] = func.apply(this, ...args);
       }
 
