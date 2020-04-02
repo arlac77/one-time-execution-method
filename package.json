@@ -1,0 +1,5 @@
+{
+    "name" : "one-time-execution-method",
+    "main" : "src/one-time-execution-method.mjs",
+    "module" : "src/one-time-execution-method.mjs"
+}
