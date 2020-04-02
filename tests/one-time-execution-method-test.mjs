@@ -20,14 +20,14 @@ class MyClass {
 
 replaceWithOneTimeExecutionMethod(MyClass.prototype, "initialize");
 
-test("defineOneTimeExecutionMethod once", async t => {
+test("replaceWithOneTimeExecutionMethod once", async t => {
   const object = new MyClass();
   t.is(object.executions, 0);
   await object.initialize();
   t.is(object.executions, 1);
 });
 
-test("defineOneTimeExecutionMethod parallel", async t => {
+test("replaceWithOneTimeExecutionMethod parallel", async t => {
   const object = new MyClass();
 
   t.is(object.executions, 0);
@@ -40,7 +40,7 @@ test("defineOneTimeExecutionMethod parallel", async t => {
 
 replaceWithOneTimeExecutionMethod(MyClass.prototype, "reentrantInitialize");
 
-test.only("defineOneTimeExecutionMethod reentrant", async t => {
+test.skip("replaceWithOneTimeExecutionMethod reentrant", async t => {
   const object = new MyClass();
 
   t.is(object.executions, 0);
