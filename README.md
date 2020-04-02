@@ -22,19 +22,21 @@ For async functions the resulting Promise of the 1st. invocation will be preserv
 <!-- skip-example -->
 
 ```javascript
-import { defineOneTimeExecutionMethod } from "one-time-execution-method";
+import { replaceWithOneTimeExecutionMethod } from "one-time-execution-method";
 
 class MyClass {
   constructor() {
     this.executions = 0;
   }
+
+  initialize() {
+    this.executions++;
+    return new Promise(resolve => setTimeout(resolve, 1000));
+  }
 }
 
-// add initialize() method to MyClass
-defineOneTimeExecutionMethod(MyClass.prototype, function initialize() {
-  this.executions++;
-  return new Promise(resolve => setTimeout(resolve, 1000));
-});
+// replace initialize() method of MyClass to be executed only once
+replaceWithOneTimeExecutionMethod(MyClass.prototype, "initialize");
 
 async doit() {
   const object = new MyClass();
@@ -57,37 +59,31 @@ doit();
 
 ### Table of Contents
 
--   [AsyncFunction](#asyncfunction)
--   [defineOneTimeExecutionMethod](#defineonetimeexecutionmethod)
+-   [replaceWithOneTimeExecutionMethod](#replacewithonetimeexecutionmethod)
     -   [Parameters](#parameters)
 -   [transitionState](#transitionstate)
 
-## AsyncFunction
-
-Type: [Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
-
-## defineOneTimeExecutionMethod
+## replaceWithOneTimeExecutionMethod
 
 For async functions the resulting Promise of the 1st. invocation
 will be preserved and always delivered in the future.
 
 ```js
-class MyClass { }
-defineOneTimeExecutionMethod(MyClass.prototype, async function initialize() {
- // code here will be executed only once
-});
+class MyClass {
+  async initialize() {
+   // code here will be executed only once
+  }
+}
+replaceWithOneTimeExecutionMethod(MyClass.prototype, "initialize");
 
 const object = new MyClass();
-object.initialize(); // body will be executed only once
+object.initialize(); // body will/can be executed only once
 ```
 
 ### Parameters
 
 -   `object` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** prototype to bind method against
--   `func` **[AsyncFunction](#asyncfunction)** to be executed (once) must deliver a Promise
--   `name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** of the method (optional, default `func.name`)
+-   `name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** of the method
 
 ## transitionState
 

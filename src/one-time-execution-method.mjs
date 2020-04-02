@@ -1,27 +1,22 @@
 
 /**
- * @typedef {Function} AsyncFunction
- * @async
- * @return {Promise} 
- */
-
-/**
  * For async functions the resulting Promise of the 1st. invocation
  * will be preserved and always delivered in the future.
  * ```js
- * class MyClass { }
- * defineOneTimeExecutionMethod(MyClass.prototype, async function initialize() {
- *  // code here will be executed only once
- * });
+ * class MyClass {
+ *   async initialize() {
+ *    // code here will be executed only once
+ *   }
+ * }
+ * replaceWithOneTimeExecutionMethod(MyClass.prototype, "initialize");
  * 
  * const object = new MyClass();
- * object.initialize(); // body will be executed only once
+ * object.initialize(); // body will/can be executed only once
  * ```
  * @param {Object} object prototype to bind method against 
- * @param {AsyncFunction} func to be executed (once) must deliver a Promise
  * @param {string} name of the method
  */
-export function defineOneTimeExecutionMethod(object, func, name=func.name) {
+export function replaceWithOneTimeExecutionMethod(object, name) {
 
   /**
    * Object symbol slot holding the state of the method
@@ -29,6 +24,7 @@ export function defineOneTimeExecutionMethod(object, func, name=func.name) {
    * * Promise   -> func currently running or fullfilled -> deliver this Promise
    */
   const transitionState = Symbol(`OneTimeExecutionState<${name}>`);
+  const func = object[name];
 
   Object.defineProperty(object, name, {
     value: function(...args) {
