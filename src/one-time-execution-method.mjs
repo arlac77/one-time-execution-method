@@ -1,5 +1,6 @@
 
 /**
+ * Replace a given method with one that will only be executed once. 
  * For async functions the resulting Promise of the 1st. invocation
  * will be preserved and always delivered in the future.
  * ```js
@@ -12,6 +13,7 @@
  * 
  * const object = new MyClass();
  * object.initialize(); // body will/can be executed only once
+ * object.initialize(); // 2nd. call immediatly returns
  * ```
  * @param {Object} object prototype to bind method against 
  * @param {string} name of the method
