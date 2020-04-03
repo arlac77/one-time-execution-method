@@ -12,7 +12,7 @@ jobs:
       script:
         - npm run lint
         - npm run docs
-      skip_cleanup: 'false'
+      skip_cleanup: 'true'
     - stage: release
       node_js: lts/*
       script: skip
