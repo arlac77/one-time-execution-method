@@ -4,7 +4,6 @@
   "sideEffects": false,
   "type": "module",
   "main": "src/one-time-execution-method.mjs",
-  "module": "src/one-time-execution-method.mjs",
   "description": "define a method that will be executed only once",
   "keywords": [
     "once",
