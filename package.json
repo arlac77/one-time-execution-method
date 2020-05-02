@@ -5,7 +5,8 @@
   "type": "module",
   "main": "src/one-time-execution-method.mjs",
   "exports": {
-    ".": "./src/one-time-execution-method.mjs"
+    ".": "./src/one-time-execution-method.mjs",
+    "./": "./"
   },
   "description": "define a method that will be executed only once",
   "keywords": [
