@@ -9,11 +9,11 @@
   },
   "description": "define a method that will be executed only once",
   "keywords": [
+    "async",
     "once",
-    "single",
     "one",
     "one-time",
-    "async"
+    "single"
   ],
   "license": "BSD-2-Clause",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "ava": "^3.8.2",
-    "c8": "^7.1.2",
+    "c8": "^7.2.0",
     "documentation": "^13.0.1",
     "semantic-release": "^17.0.8"
   },
