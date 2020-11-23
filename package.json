@@ -1,6 +1,9 @@
 {
   "name": "one-time-execution-method",
   "version": "0.0.0-semantic-release",
+  "publishConfig": {
+    "access": "public"
+  },
   "sideEffects": false,
   "type": "module",
   "main": "./src/one-time-execution-method.mjs",
@@ -14,6 +17,12 @@
     "one",
     "one-time",
     "single"
+  ],
+  "contributors": [
+    {
+      "name": "Markus Felten",
+      "email": "markus.felten@gmx.de"
+    }
   ],
   "license": "BSD-2-Clause",
   "scripts": {
@@ -43,8 +52,8 @@
   "homepage": "https://github.com/arlac77/one-time-execution-method#readme",
   "template": {
     "inheritFrom": [
-      "arlac77/template-esm-only",
-      "arlac77/template-github"
+      "arlac77/template-arlac77-github",
+      "arlac77/template-esm-only"
     ]
   }
 }
