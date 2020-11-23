@@ -1,5 +1,4 @@
 .github
-.travis.yml
 build
 tests
 doc
