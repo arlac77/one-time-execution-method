@@ -21,9 +21,9 @@
 export function replaceWithOneTimeExecutionMethod(object, name) {
 
   /**
-   * Object symbol slot holding the state of the method
-   * * undefined -> call func and store Promise
-   * * Promise   -> func currently running or fullfilled -> deliver this Promise
+   * Object symbol slot holding the state of the method.
+   * - undefined -> call func and store Promise
+   * - Promise   -> func currently running or fullfilled -> deliver this Promise
    */
   const transitionState = Symbol(`OneTimeExecutionState<${name}>`);
   const func = object[name];
