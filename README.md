@@ -87,7 +87,7 @@ object.initialize(); // 2nd. call immediatly returns
 
 ## transitionState
 
-Object symbol slot holding the state of the method
+Object symbol slot holding the state of the method.
 
 -   undefined -> call func and store Promise
 -   Promise   -> func currently running or fullfilled -> deliver this Promise
