@@ -5,7 +5,6 @@
     "access": "public"
   },
   "sideEffects": false,
-  "type": "module",
   "exports": {
     ".": "./src/one-time-execution-method.mjs"
   },
