@@ -3,7 +3,7 @@
 [![minified size](https://badgen.net/bundlephobia/min/one-time-execution-method)](https://bundlephobia.com/result?p=one-time-execution-method)
 [![downloads](http://img.shields.io/npm/dm/one-time-execution-method.svg?style=flat-square)](https://npmjs.org/package/one-time-execution-method)
 [![GitHub Issues](https://img.shields.io/github/issues/arlac77/one-time-execution-method.svg?style=flat-square)](https://github.com/arlac77/one-time-execution-method/issues)
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Farlac77%2Fone-time-execution-method%2Fbadge&style=flat)](https://actions-badge.atrox.dev/arlac77/one-time-execution-method/goto)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Farlac77%2Fone-time-execution-method%2Fbadge\&style=flat)](https://actions-badge.atrox.dev/arlac77/one-time-execution-method/goto)
 [![Styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Known Vulnerabilities](https://snyk.io/test/github/arlac77/one-time-execution-method/badge.svg)](https://snyk.io/test/github/arlac77/one-time-execution-method)
@@ -57,13 +57,13 @@ doit();
 
 ### Table of Contents
 
--   [replaceWithOneTimeExecutionMethod](#replacewithonetimeexecutionmethod)
-    -   [Parameters](#parameters)
--   [transitionState](#transitionstate)
+*   [replaceWithOneTimeExecutionMethod](#replacewithonetimeexecutionmethod)
+    *   [Parameters](#parameters)
+*   [transitionState](#transitionstate)
 
 ## replaceWithOneTimeExecutionMethod
 
-Replace a given method with one that will only be executed once. 
+Replace a given method with one that will only be executed once.
 For async functions the resulting Promise of the 1st. invocation
 will be preserved and always delivered in the future.
 
@@ -82,15 +82,15 @@ object.initialize(); // 2nd. call immediatly returns
 
 ### Parameters
 
--   `object` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** prototype to bind method against
--   `name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** of the method
+*   `object` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** prototype to bind method against
+*   `name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** of the method
 
 ## transitionState
 
 Object symbol slot holding the state of the method.
 
--   undefined -> call func and store Promise
--   Promise   -> func currently running or fullfilled -> deliver this Promise
+*   undefined -> call func and store Promise
+*   Promise   -> func currently running or fullfilled -> deliver this Promise
 
 # install
 
