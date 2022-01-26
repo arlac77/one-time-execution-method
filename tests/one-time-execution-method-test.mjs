@@ -31,7 +31,11 @@ test("replaceWithOneTimeExecutionMethod parallel", async t => {
   const object = new MyClass();
 
   t.is(object.executions, 0);
-  const x = Promise.all([object.initialize(), object.initialize(), object.initialize()]);
+  const x = Promise.all([
+    object.initialize(),
+    object.initialize(),
+    object.initialize()
+  ]);
 
   await object.initialize();
   await x;

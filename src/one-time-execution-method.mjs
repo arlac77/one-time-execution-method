@@ -1,6 +1,5 @@
-
 /**
- * Replace a given method with one that will only be executed once. 
+ * Replace a given method with one that will only be executed once.
  * For async functions the resulting Promise of the 1st. invocation
  * will be preserved and always delivered in the future.
  * ```js
@@ -10,16 +9,15 @@
  *   }
  * }
  * replaceWithOneTimeExecutionMethod(MyClass.prototype, "initialize");
- * 
+ *
  * const object = new MyClass();
  * object.initialize(); // body will/can be executed only once
  * object.initialize(); // 2nd. call immediatly returns
  * ```
- * @param {Object} object prototype to bind method against 
+ * @param {Object} object prototype to bind method against
  * @param {string} name of the method
  */
 export function replaceWithOneTimeExecutionMethod(object, name) {
-
   /**
    * Object symbol slot holding the state of the method.
    * - undefined -> call func and store Promise
@@ -29,7 +27,7 @@ export function replaceWithOneTimeExecutionMethod(object, name) {
   const func = object[name];
 
   Object.defineProperty(object, name, {
-    value: function(...args) {
+    value: function (...args) {
       if (this[transitionState] === undefined) {
         this[transitionState] = func.apply(this, ...args);
       }
