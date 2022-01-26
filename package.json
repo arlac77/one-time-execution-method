@@ -11,11 +11,11 @@
   "description": "define a method that will be executed only once",
   "keywords": [
     "async",
+    "cache",
     "once",
     "one",
     "one-time",
-    "single",
-    "cache"
+    "single"
   ],
   "contributors": [
     {
