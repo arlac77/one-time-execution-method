@@ -44,7 +44,7 @@ test("replaceWithOneTimeExecutionMethod parallel", async t => {
 
 replaceWithOneTimeExecutionMethod(MyClass.prototype, "reentrantInitialize");
 
-test.skip("replaceWithOneTimeExecutionMethod reentrant", async t => {
+test("replaceWithOneTimeExecutionMethod reentrant", async t => {
   const object = new MyClass();
 
   t.is(object.executions, 0);

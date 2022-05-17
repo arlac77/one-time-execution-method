@@ -29,6 +29,9 @@ export function replaceWithOneTimeExecutionMethod(object, name) {
   Object.defineProperty(object, name, {
     value: function (...args) {
       if (this[transitionState] === undefined) {
+        // make method reentrant
+        this[transitionState] = Promise.resolve();
+
         this[transitionState] = func.apply(this, ...args);
       }
 
