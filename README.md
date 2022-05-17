@@ -13,7 +13,7 @@
 
 Define methods that will be executed only once.
 
-For async functions the resulting Promise of the 1st. invocation will be preserved and always delivered in the future
+For async functions the resulting Promise of the 1st. invocation will be preserved and always delivered in the future.
 
 # example
 
@@ -57,9 +57,15 @@ doit();
 
 ### Table of Contents
 
-*   [replaceWithOneTimeExecutionMethod](#replacewithonetimeexecutionmethod)
-    *   [Parameters](#parameters)
-*   [transitionState](#transitionstate)
+- [one-time-execution-method](#one-time-execution-method)
+- [example](#example)
+- [API](#api)
+    - [Table of Contents](#table-of-contents)
+  - [replaceWithOneTimeExecutionMethod](#replacewithonetimeexecutionmethod)
+    - [Parameters](#parameters)
+  - [transitionState](#transitionstate)
+- [install](#install)
+- [license](#license)
 
 ## replaceWithOneTimeExecutionMethod
 
