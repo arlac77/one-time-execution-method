@@ -57,15 +57,9 @@ doit();
 
 ### Table of Contents
 
-- [one-time-execution-method](#one-time-execution-method)
-- [example](#example)
-- [API](#api)
-    - [Table of Contents](#table-of-contents)
-  - [replaceWithOneTimeExecutionMethod](#replacewithonetimeexecutionmethod)
-    - [Parameters](#parameters)
-  - [transitionState](#transitionstate)
-- [install](#install)
-- [license](#license)
+*   [replaceWithOneTimeExecutionMethod](#replacewithonetimeexecutionmethod)
+    *   [Parameters](#parameters)
+*   [transitionState](#transitionstate)
 
 ## replaceWithOneTimeExecutionMethod
 
