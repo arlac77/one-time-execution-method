@@ -1,6 +1,6 @@
 [![npm](https://img.shields.io/npm/v/one-time-execution-method.svg)](https://www.npmjs.com/package/one-time-execution-method)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-[![Open Bundle](https://bundlejs.com/badge-light.svg)](https://bundlejs.com/?q=one-time-execution-method)
+[![bundlejs](https://deno.bundlejs.com/?q=one-time-execution-method\&badge=detailed)](https://bundlejs.com/?q=one-time-execution-method)
 [![downloads](http://img.shields.io/npm/dm/one-time-execution-method.svg?style=flat-square)](https://npmjs.org/package/one-time-execution-method)
 [![GitHub Issues](https://img.shields.io/github/issues/arlac77/one-time-execution-method.svg?style=flat-square)](https://github.com/arlac77/one-time-execution-method/issues)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Farlac77%2Fone-time-execution-method%2Fbadge\&style=flat)](https://actions-badge.atrox.dev/arlac77/one-time-execution-method/goto)
