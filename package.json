@@ -2,7 +2,8 @@
   "name": "one-time-execution-method",
   "version": "0.0.0-semantic-release",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "exports": {
     ".": "./src/one-time-execution-method.mjs"
