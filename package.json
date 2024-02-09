@@ -5,13 +5,13 @@
     "access": "public",
     "provenance": true
   },
+  "types": "./dist/one-time-execution-method.d.mts",
   "exports": {
     ".": {
       "types": "./dist/one-time-execution-method.d.mts",
       "default": "./src/one-time-execution-method.mjs"
     }
   },
-  "types": "./dist/one-time-execution-method.d.mts",
   "description": "define a method that will be executed only once",
   "keywords": [
     "async",
