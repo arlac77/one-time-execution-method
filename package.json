@@ -8,8 +8,8 @@
   "types": "./types/one-time-execution-method.d.mts",
   "exports": {
     ".": {
-      "default": "./src/one-time-execution-method.mjs",
-      "types": "./types/one-time-execution-method.d.mts"
+      "types": "./types/one-time-execution-method.d.mts",
+      "default": "./src/one-time-execution-method.mjs"
     }
   },
   "description": "define a method that will be executed only once",
