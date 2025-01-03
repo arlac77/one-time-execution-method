@@ -1,5 +1,5 @@
 [![npm](https://img.shields.io/npm/v/one-time-execution-method.svg)](https://www.npmjs.com/package/one-time-execution-method)
-[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://spdx.org/licenses/0BSD.html)
+[![License](https://img.shields.io/badge/License-0BSD-blue.svg)](https://spdx.org/licenses/0BSD.html)
 [![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript\&label\&labelColor=blue\&color=555555)](https://typescriptlang.org)
 [![bundlejs](https://deno.bundlejs.com/?q=one-time-execution-method\&badge=detailed)](https://bundlejs.com/?q=one-time-execution-method)
 [![downloads](http://img.shields.io/npm/dm/one-time-execution-method.svg?style=flat-square)](https://npmjs.org/package/one-time-execution-method)
